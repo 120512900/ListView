@@ -11,7 +11,7 @@
         android:layout_height="100dp"
         android:id="@+id/iv"
         android:scaleType="centerCrop"
-        android:background="#000"/>
+        android:background="@drawable/a"/>
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

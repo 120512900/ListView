@@ -8,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
+
 public class MyAdapter extends BaseAdapter {
     private Context mcontext;
     private String [] id=new String []{
@@ -44,6 +46,16 @@ public class MyAdapter extends BaseAdapter {
             "20175980",
             "20175990"
 };
+    private int[] image=new int[]{
+           R.drawable.a1,
+            R.drawable.a2,
+            R.drawable.a3,R.drawable.a4,
+            R.drawable.a5,R.drawable.a6,
+            R.drawable.a7,
+            R.drawable.a8,
+            R.drawable.a9,
+            R.drawable.a10
+    };
     private LayoutInflater mLayoutInflater;
     public  MyAdapter(Context context){
         mcontext=context;
@@ -51,7 +63,7 @@ public class MyAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return 32;
+        return id.length;
     }
 
     @Override
@@ -83,6 +95,7 @@ static class ViewHolder
         }
         //赋值;
         holder.textview.setText(id[position]);
+        holder.iv.setImageResource(image[position%10]);
        // holder.iv.setImageDrawable();
         return convertView;
     }

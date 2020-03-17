@@ -57,6 +57,7 @@ listview.setAdapter(new MyAdapter(MainActivity.this));
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                                 intent.putExtra("Id",ids[position]);
+                intent.putExtra("pos",position);
                                  startActivity(intent);
                                  Toast.makeText(MainActivity.this, ids[position], Toast.LENGTH_SHORT).show();
                              }
